@@ -7,7 +7,13 @@ class TodaysWeather extends Component {
 
       return (
         <div>
-            <WeatherCard title="Currently" currentTemp={this.props.weatherInfo.getCurrentTemp()} maxTemp={this.props.weatherInfo.getTodaysMaxTemp()} minTemp={this.props.weatherInfo.getTodaysMinTemp()}/>
+            <WeatherCard 
+                title="Currently" 
+                currentTemp={this.props.weatherInfo.getCurrentTemp()} 
+                maxTemp={this.props.weatherInfo.getTodaysMaxTemp()} 
+                minTemp={this.props.weatherInfo.getTodaysMinTemp()}
+                isMinimized={false}>
+            </WeatherCard>
         </div>
       );
     }
