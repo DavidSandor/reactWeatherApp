@@ -4,7 +4,7 @@ class WeatherAPIInterface {
         return 'sunny';
     }
 
-    getCurrentTemp = () => {
+    getCurrentTemp = () => {            
         return 17;
     }
 

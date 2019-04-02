@@ -1,0 +1,28 @@
+{
+    "weatherData" : 
+        {
+            "today": 
+                {
+                    "currentTemp" : "23",
+                    "maxTemp" : "23",
+                    "minTemp" : "5",
+                    "currentState" : "windy"
+                },
+
+                "tomorrow": 
+                {
+                    "maxTemp" : "20",
+                    "minTemp" : "8",
+                    "averageState" : "cloudy"
+                },
+
+                "afterTomorrow": 
+                {
+                    "maxTemp" : "25",
+                    "minTemp" : "11",
+                    "averageState" : "sunny"
+                }
+
+        }
+    
+}
