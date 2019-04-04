@@ -5,9 +5,8 @@ class WeatherForecast extends Component {
 
     state= {
         nextDaysForecast: [
-            {day: 'Monday', maxTemp: this.props.weatherInfo.getMaxTempByDate('date'), minTemp: this.props.weatherInfo.getMinTempByDate('date')},
-            {day: 'Tuesday', maxTemp: this.props.weatherInfo.getMaxTempByDate('date'), minTemp: this.props.weatherInfo.getMinTempByDate('date')},
-            {day: 'Wednesday', maxTemp: this.props.weatherInfo.getMaxTempByDate('date'), minTemp: this.props.weatherInfo.getMinTempByDate('date')},
+            {day: 'Tomorrow', maxTemp: this.props.weatherInfo.getMaxTempByDate(1), minTemp: this.props.weatherInfo.getMinTempByDate(1)},
+            {day: 'After tomorrow', maxTemp: this.props.weatherInfo.getMaxTempByDate(2), minTemp: this.props.weatherInfo.getMinTempByDate(2)},
         ]
     }
 

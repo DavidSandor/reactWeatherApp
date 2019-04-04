@@ -1,27 +1,45 @@
-class WeatherAPIInterface {    
+import {Today} from './Data/FakeWeatherData';
+import {Tomorrow} from './Data/FakeWeatherData';
+import {AfterTomorrow} from './Data/FakeWeatherData';
+
+class WeatherAPIInterface {   
 
     getCurrentWeatherState = () => {
-        return 'sunny';
+        return Today.currentState;
     }
 
     getCurrentTemp = () => {            
-        return 17;
+        return Today.currentTemp;
     }
 
     getTodaysMaxTemp = () => {
-        return 20;
+        return Today.maxTemp;
     }
 
     getTodaysMinTemp = () => {
-        return 11;
+        return Today.minTemp;
     }   
 
-    getMaxTempByDate = (date) => {
-        return 22;
+    getMaxTempByDate = (dayShift) => {
+        switch(dayShift){
+            case 1:
+            return Tomorrow.maxTemp;
+            case 2:
+            return AfterTomorrow.maxTemp;
+            default:
+            return 100;
+        }
     }
 
-    getMinTempByDate = (date) => {
-        return 7;
+    getMinTempByDate = (dayShift) => {
+        switch(dayShift){
+            case 1:
+            return Tomorrow.minTemp;
+            case 2:
+            return AfterTomorrow.minTemp;
+            default:
+            return -100;
+        }
     }
 }
   
