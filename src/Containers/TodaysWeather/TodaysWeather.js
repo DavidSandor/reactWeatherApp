@@ -9,8 +9,18 @@ class TodaysWeather extends Component {
 
   render() {
 
+    const style = {
+      //backgroundColor: 'Green',
+      float: 'left',
+      width: '40%',
+      boxSizing: 'border-box',
+      padding: '15px',
+      textAlign: 'center',
+      height: '300px'
+    }
+
     return (
-      <div>
+      <div style={style}>
           <WeatherCard 
               title="Currently" 
               currentTemp={this.state.currentWeather.currentTemp} 

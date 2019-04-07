@@ -15,6 +15,17 @@ class WeatherForecast extends Component {
 
     render() {
 
+        const style = {
+            //backgroundColor: 'Blue',
+            float: 'left',
+            width: '60%',
+            boxSizing: 'border-box',
+            padding: '15px',
+            textAlign: 'center',
+            height: '300px'
+
+        };
+
         const forecastList = this.getWeatherForecastDays().map((foreCastDay, index) => 
             <WeatherCard
                 title={`day ${index}`}
@@ -25,7 +36,7 @@ class WeatherForecast extends Component {
         )
 
         return (
-            <div>
+            <div style={style}>
                 {forecastList}
             </div>
         );
