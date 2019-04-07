@@ -3,20 +3,24 @@ import WeatherCard from '../../Components/WeatherCard/WeatherCard'
 
 class TodaysWeather extends Component {
 
-    render() {      
-
-      return (
-        <div>
-            <WeatherCard 
-                title="Currently" 
-                currentTemp={this.props.weatherInfo.getCurrentTemp()} 
-                maxTemp={this.props.weatherInfo.getTodaysMaxTemp()} 
-                minTemp={this.props.weatherInfo.getTodaysMinTemp()}
-                isMinimized={false}>
-            </WeatherCard>
-        </div>
-      );
-    }
+  state = {
+    currentWeather: this.props.weatherInfo.getCurrentWeatherState()
   }
+
+  render() {
+
+    return (
+      <div>
+          <WeatherCard 
+              title="Currently" 
+              currentTemp={this.state.currentWeather.currentTemp} 
+              maxTemp={this.state.currentWeather.maxTemp} 
+              minTemp={this.state.currentWeather.minTemp}
+              isMinimized={false}>
+          </WeatherCard>
+      </div>
+    );
+  }
+}
   
-  export default TodaysWeather;
+export default TodaysWeather;

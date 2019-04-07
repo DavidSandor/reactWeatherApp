@@ -1,24 +1,31 @@
 const today = {
-    currentTemp : 23,
+    currentTemp : 21,
     maxTemp : 23,
     minTemp : 5,
-    currentState : "windy"
+    currentType : "windy"
 }
 
-const tomorrow = {
-    maxTemp : 20,
-    minTemp: 10,
-    averageState: "sunny"
-}
+const forecast = [
+    {
+        maxTemp : 20,
+        minTemp: 10,
+        averageType: "sunny"
+    },
+    
+    {
+        maxTemp : 25,
+        minTemp: 14,
+        averageType: "cloudy"
+    },
 
-const afterTomorrow = {
-    maxTemp : 25,
-    minTemp: 14,
-    averageState: "cloudy"
-}
+    {
+        maxTemp : 22,
+        minTemp: 11,
+        averageType: "cloudy"
+    }
+]
 
 export {
     today as Today,
-    tomorrow as Tomorrow,
-    afterTomorrow as AfterTomorrow
+    forecast as Forecast
 };

@@ -3,18 +3,21 @@ import WeatherCard from '../../Components/WeatherCard/WeatherCard'
 
 class WeatherForecast extends Component {
 
-    state= {
-        nextDaysForecast: [
-            {day: 'Tomorrow', maxTemp: this.props.weatherInfo.getMaxTempByDate(1), minTemp: this.props.weatherInfo.getMinTempByDate(1)},
-            {day: 'After tomorrow', maxTemp: this.props.weatherInfo.getMaxTempByDate(2), minTemp: this.props.weatherInfo.getMinTempByDate(2)},
-        ]
+    getWeatherForecastDays = () => {
+        const forecastDays = [];
+
+        for (let index = 0; index < 3; index++) {
+            forecastDays.push(this.props.weatherInfo.getWeatherStateByDay(index));           
+        }
+
+        return forecastDays;
     }
 
     render() {
 
-        const forecastList = this.state.nextDaysForecast.map((foreCastDay)=> 
-            <WeatherCard 
-                title={foreCastDay.day} 
+        const forecastList = this.getWeatherForecastDays().map((foreCastDay, index) => 
+            <WeatherCard
+                title={`day ${index}`}
                 maxTemp={foreCastDay.maxTemp} 
                 minTemp={foreCastDay.minTemp}
                 isMinimized={true}>
@@ -29,4 +32,4 @@ class WeatherForecast extends Component {
     }
 }
   
-  export default WeatherForecast;
+export default WeatherForecast;
